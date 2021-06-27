@@ -1,0 +1,49 @@
+body {
+   background-color: rgb(97, 4, 97);
+   width:100vw;
+   height:100vh;
+   display:flex;
+   align-items: center;
+   justify-content: center; 
+}
+.container {
+    position: relative;
+    width:400px;
+    height: 400px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    overflow: hidden;
+}
+
+.container .item {
+    position: absolute;
+    background:url("image/kayla-staring.jpg");
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: darken;
+    mix-blend-mode: screen;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:transform 0.3s;
+
+}
+
+.container .red {
+    background-color:#f00;
+    transform: translate(3px, -6px);
+}
+
+.container .green {
+    background-color :#0f0;
+    transform: translate(-3px, -6px);
+}
+
+.container .blue {
+    background-color:#00f;
+    transform: translate(0px, 9px);
+}
+
+.container:hover .item {
+    transform:translate(0px, 0px) !important;
+} 
